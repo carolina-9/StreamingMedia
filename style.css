@@ -1,6 +1,10 @@
-body {
+ body {
     width:834px;
+    background-color: darkblue;
+    margin: 0 auto;
+    
 }
+ /* This is nav section */
 nav {
     background-color: blue;
     position:absolute;
@@ -12,23 +16,82 @@ nav {
 h1 {
     float:left;
     color:white;
+    padding-left:50px;
 }
 ul li {
     list-style: none;
     float:right;
     padding-top:5px;
-
 }
 
 li {
     padding:10px;
     width:80px;
+    text-align: center;
 }
 
+/* Smooth Jazz / Main section */
 main {
 
   margin-top:69px;
   width: 100%;
   background-color: red;
+}
+main p {
+    margin-bottom: 0;
+}
+
+/* Trending section */
+h3 {
+    margin-top:0;
+    padding-left:10px;
+}
+.content {
+    background-color: white;
+    margin-bottom:100px;
+    padding-top:40px;
+    padding-right: 20px;
+}
+.trending {
+    display: flex;
+    top:-20px;
+}
+.horizontal-songs {
+    display:flex;
+    flex: 33.33%;
+    padding: 10px;
+    height: 300px;
+}
+
+        /* this is for the text in image - trending section */
+
+ .inner-trending-text {
+    background-color: grey;
+    position:absolute; 
+     top:450px;
+     width:300px;
+}
+
+audio {
+    position: absolute;
 
 }
+
+
+
+
+
+
+
+
+/* CSS AUDIO
+
+audio::-webkit-media-controls-mute-button {
+
+}
+audio::-webkit-media-controls-play-button {
+
+}
+audio::-webkit-media-controls-enclosure {
+
+} */
