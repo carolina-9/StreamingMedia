@@ -2,6 +2,7 @@
     width:834px;
     background-color: darkblue;
     margin: 0 auto;
+    overflow-x: hidden;
     
 }
  /* This is nav section */
@@ -55,7 +56,36 @@ h3 {
 .trending {
     display: flex;
     top:-20px;
+    position: relative;
 }
+.align-button-right {
+    display: flex;
+        justify-content: flex-end;
+}
+/* trending scroll */
+#trending-scroll {
+    overflow-x:auto;
+    overflow-y: hidden;
+    overflow:scroll;
+
+}
+#trending-scroll ::-webkit-scrollbar {
+    width:15px;
+
+}
+#trending-scroll ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+
+}
+#trending-scroll ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 5px;
+
+}
+#trending-scroll ::-webkit-scrollbar-thumb:hover {
+background: #020659;
+}
+/* trending position of text/images/audio */
 .horizontal-songs {
     display:flex;
     flex: 33.33%;
@@ -63,35 +93,111 @@ h3 {
     height: 300px;
 }
 
-        /* this is for the text in image - trending section */
-
- .inner-trending-text {
+.inner-trending-text {
     background-color: grey;
     position:absolute; 
-     top:450px;
-     width:300px;
+    top:230px;
+    height: 80px;
+    width:300px;
+    overflow-x:auto;
+    overflow-y: hidden;
 }
 
 audio {
+    position:absolute; 
+    top:130px;
+    overflow-x:auto;
+    overflow-y: hidden;
+
+} 
+
+/* your playlist / curated playtlists floats */
+.both-playlists {
+    /* background-color: red; */
+    height:600px;
+    border: 1px solid red;
+    /* margin-top:20px; */
+    margin-left:15px;
+}
+.your-playlists {
+    float:left;
+    /* height:410px; */
+    width: 350px;
+    height:500px;
+    background-color: lightblue;
+    display:grid;
+    grid-template-columns: 1fr;
+}
+.curated-playlists {
+    float:right;
+    width: 350px;
+    height:500px;
+    background-color: #020659;
+    display:grid;
+    grid-template-columns: 1fr;
+    /* position: relative; */
+    /* bottom:701px; */
+    clear:right;
+}
+.your-playlist-cards{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid black;
+    margin:10px;
+    background-color: blue;
+    text-align: center;
+    padding:8px;
+    padding-right:40px;
+}
+
+/* buttons */
+
+ .playlists-button {
+    bottom:-240px;
     position: absolute;
-
+    margin-left:270px;
+    margin-top:200px;
 }
-
-
-
-
-
-
-
-
-/* CSS AUDIO
-
-audio::-webkit-media-controls-mute-button {
-
-}
-audio::-webkit-media-controls-play-button {
-
-}
-audio::-webkit-media-controls-enclosure {
-
+/*
+.curated-button {
+    bottom:-240px;
+    position: absolute;
+    margin-left:700px;
 } */
+
+
+
+
+/* scroll for playlists */
+#playlists  {
+   overflow-x: hidden;
+    overflow-y: auto;
+   
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width:15px;
+
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+    box-shadow: inset 0 0 15px #020659;
+
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background: white;
+
+}
+
+footer {
+    bottom: auto;
+    position:absolute;
+}
+/* CSS AUDIO */
+
+
+
+
