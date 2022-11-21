@@ -6,15 +6,12 @@
     font-family: raleway, sans-serif;
 }
  /* This is nav section */
-nav {
+
+ nav {
     background-color: #030A8C;
-    position:absolute;
-    top:0;
-    width:834px;
-    margin: auto 0;
-    display:block;
     height:60px;
 }
+ 
 .nav-headline {
     float:left;
     color:white;
@@ -24,10 +21,11 @@ nav {
     font-size:25px;
     
 }
+
 ul li {
     list-style: none;
     float:right;
-    padding-top:5px;
+    /* padding-top:2px; */
     font-size:18px;
 }
 
@@ -40,16 +38,15 @@ li {
     font-family: raleway, sans-serif;
     font-style: normal;
     color:white;
-}
+} 
 
 /* Smooth Jazz / Main section */
 main {
-  margin-top:59px;
   width: 100%;
   padding-bottom:15px;
   color:white;
   background: rgb(33,2,217);
-background: linear-gradient(90deg, rgba(33,2,217,1) 7%, rgba(3,10,140,1) 21%, rgba(1,12,20,1) 89%);
+  background: linear-gradient(90deg, rgba(33,2,217,1) 7%, rgba(3,10,140,1) 21%, rgba(1,12,20,1) 89%);
 }
 main p {
     margin-bottom: 0;
@@ -160,7 +157,6 @@ audio::-webkit-media-controls-enclosure {
 button {
    padding-left: 35px;
    padding-right: 35px;
-   padding-top:5px;
    padding-bottom:5px;
    margin-right:10px;
    font-size: 15px;
@@ -170,6 +166,10 @@ button {
     color:white;
    border-color: #590242;
    border-radius: 5px;
+   height: 40px;
+}
+.trending-button {
+    margin-top: -9px;
 }
 
 /* your playlist / curated playtlists grid & style */
@@ -185,7 +185,6 @@ button {
     width: 417px;
     height:500px;
     background-color: #2699FB;
-    ;
     display:grid;
     grid-template-columns: 1fr;
 }
@@ -196,7 +195,7 @@ button {
     display:grid;
     grid-template-columns: 1fr;
 }
-.your-playlist-cards{
+.your-playlist-cards {
     display:grid;
     grid-template-columns: 1fr 1fr;
     margin:10px;
@@ -229,6 +228,10 @@ button {
    margin-top:10px;
    margin-left: 220px;
 }
+button:hover {
+    background-color: #020659;
+    transition: 0.5s;
+}
 
 footer {
     padding-bottom:20px;
@@ -240,13 +243,6 @@ footer p {
     font-size: 12px;
     color:#590242;
 }
-
-button:hover {
-    background-color: #020659;
-    transition: 0.5s;
-}
-
-
 
 /* scroll for playlists */
 #playlists  {
@@ -276,79 +272,144 @@ button:hover {
 
 
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:500px) {
+    body {
+       width:375px;
+       margin-bottom:0;
+      overflow-x: hidden;
+      font-family: raleway, sans-serif;
+    }
+    .content {
+        width:375px;
+        height:1350px;
+    }
     .wrapper-both-playlists {
         display:grid;
         grid-template-columns: 1fr;
-
+        grid-template-columns: 375px;
     }
-}
+    .your-playlists {
+        width:355px;
+        margin-bottom:120px; 
+        display:flex;
+        flex: 33.33%;
+        padding: 10px;
+        height: 300px;
+    }
+    .your-playlist-cards {
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+    .curated-playlists  {
+        width:355px;
+        padding-bottom:20px; 
+        display:flex;
+        flex: 33.33%;
+        padding: 10px;
+        height: 300px;
+    }
+    .curated-playlist-cards {
+        display:grid;
+        grid-template-columns: 1fr;
+    }
 
-/* menu code */
-
-ul {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-}
-label {
-    cursor: pointer;
-    display: inline-block;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-}
-label span {
-    background-color: #ffffff;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background-color .2s ease-out;
-    width: 18px;
-}
-label span:before, label span:after {
-    background: #ffffff;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-label span:before {
-    top: 5px;
-}
-label span:after {
-    top: -5px;
-}
-input {
-    display: none;
-}
-input:checked ~ ul {
-    max-height: 500px;
-}
-input:checked ~ label span {
-    background: transparent;
-}
-input:checked ~ label span:before {
-    transform: rotate(-45deg);
-}
-input:checked ~ label span:after {
-    transform: rotate(45deg);
-}
-input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
-    top: 0;
-}
-
-@media screen and (min-width:834px) {
-    ul {
-        overflow: visible;
+    .trending-button {
+        margin-right:176px;
+        position: relative;
+        margin-bottom:12px;
+    }
+    #playlists  {
+        overflow-x: auto;
+         overflow-y: hidden;
+     }
+     
+     .curated-playlist-heading {
+        position:absolute;
+        margin-top:407px;
+        margin-right:40px;
+        width:380px;
+        margin-bottom:10px
+     }
+     .your-playlists-button {
         position: absolute;
-        top: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        bottom: 105px;
+        left: -136px;
+        width:190px;
+     }
+     .more-curated-button {
+        position: relative;
+        right: 198px;
+        width:190px;
+     }
+    
     }
-    label span, input {
+
+    ul {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+    }
+    label {
+        cursor: pointer;
+        display: inline-block;
+        padding: 28px 20px;
+        position: relative;
+        user-select: none;
+    }
+    label span {
+        background-color: #ffffff;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background-color .2s ease-out;
+        width: 18px;
+    }
+    label span:before, label span:after {
+        background: #ffffff;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    label span:before {
+        top: 5px;
+    }
+    label span:after {
+        top: -5px;
+    }
+    input {
         display: none;
     }
-}
+    input:checked ~ ul {
+        max-height: 500px;
+    }
+    input:checked ~ label span {
+        background: transparent;
+    }
+    input:checked ~ label span:before {
+        transform: rotate(-45deg);
+    }
+    input:checked ~ label span:after {
+        transform: rotate(45deg);
+    }
+    input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+        top: 0;
+    }
+    
+
+    @media screen and (min-width:834px) {
+        ul {
+            overflow: visible;
+            position: absolute;
+            top: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+        label span, input {
+            display: none;
+        }
+    }
+
+

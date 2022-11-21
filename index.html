@@ -9,20 +9,21 @@
     <title>MuzakMaker</title>
 </head>
    <main>
+    <nav>
+        <input  class="menu-btn" type="checkbox" id="menu-btn"/>
+    <label class="menu-icon" for="menu-btn"><span></span></label>
+        <ul>
+            <li class="nav-headline">MuzakMaker</li>
+            <li>Curated Playlists</li>
+            <li>Your playlists</li>
+            <li>Trending Songs</li>
+            <li><img src="images/duke-silver.png" alt="duke silver"></li>
+        </ul>
+    </nav>
     <h2>Smooth Jazz</h2>
     <p>This station is dedicated to the soothing sounds of smooth jazz. This genre of commercially oriented crossover jazz became dominant in the 1980s and early 1990s.
     </p>
    </main>
-   <nav>
-    <!-- <h1>MuzakMaker</h1>  -->
-    <ul>
-        <li class="nav-headline">MuzakMaker</li>
-        <li>Curated Playlists</li>
-        <li>Your playlists</li>
-        <li>Trending Songs</li>
-        <li><img src="images/duke-silver.png" alt="duke silver"></li>
-    </ul>
-   </nav>
    <section class="content">
     <h3>Trending Songs</h3>
         <div class="trending" id="trending-scroll">
@@ -72,14 +73,14 @@
                 </section>
             </div>
             <div class="align-button-right">
-                <button>More trending</button>
+                <button class="trending-button">More trending</button>
             </div>
             <!-- PLaylists Scroll Section -->
 
             <div class="wrapper-both-playlists">
                 <!-- Titles -->
-                <div><h3 class="playlist-heading">Playlists</h3></div>
-                <div><h3 class="playlist-heading"> Curated Playlists</h3></div>
+                <div><h3 class="playlist-heading your-playlist-heading">Your Playlists</h3></div>
+                <div><h3 class="playlist-heading curated-playlist-heading"> Curated Playlists</h3></div>
 
                 <!-- Scrollable PLaylists -->
                 <div>
@@ -170,8 +171,8 @@
                 </div>
                 
                 <!-- Buttons -->
-                <div><button class="playlists-button">All your playlists</button></div>
-                <div><button class="playlists-button">More Curated</button></div>
+                <div><button class="playlists-button your-playlists-button">All your playlists</button></div>
+                <div><button class="playlists-button more-curated-button">More Curated</button></div>
               </div>
             </section>
 </sectio>
