@@ -10,35 +10,43 @@
  nav {
     background-color: #030A8C;
     height:60px;
+    position: relative;
 }
  
-.nav-headline {
+.nav-headline  {
     float:left;
     color:white;
-    top:-5px;
-    left:-64px;
+    left:-40px;
     position: relative;
     font-size:25px;
+    height:45px;
     
+}
+li.nav-headline {
+    padding-top:19px;
+    position: relative;
 }
 
 ul li {
     list-style: none;
     float:right;
-    /* padding-top:2px; */
-    font-size:18px;
+    top:-4px;
+
 }
 
 li {
-    padding:38px;
+    padding: 0 40px 0 40px;
     position: relative;
-    top:-10px;
-    width:80px;
+    padding-top:10px;
+    height:55px;
     text-align: center;
     font-family: raleway, sans-serif;
     font-style: normal;
     color:white;
 } 
+li:hover {
+    background: #590242;
+}
 
 /* Smooth Jazz / Main section */
 main {
@@ -181,7 +189,7 @@ button {
   /* place-items: center */
 }
 
-.your-playlists {
+.your-playlist {
     width: 417px;
     height:500px;
     background-color: #2699FB;
@@ -230,6 +238,7 @@ button {
 }
 button:hover {
     background-color: #020659;
+    border-color: #020659;
     transition: 0.5s;
 }
 
@@ -245,28 +254,51 @@ footer p {
 }
 
 /* scroll for playlists */
-#playlists  {
+#scroll  {
    overflow-x: hidden;
     overflow-y: auto;
    
 }
-#playlists::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+#scroll::-webkit-scrollbar, #curated ::-webkit-scrollbar {
     width:15px;
 
 }
-#playlists::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+#scroll::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
     box-shadow: inset 0 0 15px #020659;
 
 }
-#playlists::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+#scroll::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
     background: #020659;
     border-radius: 5px;
 
 }
-#playlists::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+#scroll::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
     background: white;
 
 }
+
+#scroll-playlist  {
+    overflow-x: hidden;
+     overflow-y: auto;
+    
+ }
+ #scroll-playlist::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+     width:15px;
+ 
+ }
+ #scroll-playlist::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+     box-shadow: inset 0 0 15px #020659;
+ 
+ }
+ #scroll-playlist::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+     background: #020659;
+     border-radius: 5px;
+ 
+ }
+ #scroll-playlist::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+     background: white;
+ 
+ }
 
 /* media query */
 
@@ -288,7 +320,7 @@ footer p {
         grid-template-columns: 1fr;
         grid-template-columns: 375px;
     }
-    .your-playlists {
+    .your-playlist {
         width:355px;
         margin-bottom:120px; 
         display:flex;
@@ -314,9 +346,10 @@ footer p {
     }
 
     .trending-button {
-        margin-right:176px;
+        margin-right: 156px;
         position: relative;
         margin-bottom:12px;
+        width:190px;
     }
     #playlists  {
         overflow-x: auto;
@@ -331,24 +364,37 @@ footer p {
         margin-bottom:10px
      }
      .your-playlists-button {
-        position: absolute;
-        bottom: 105px;
-        left: -136px;
+        position: relative;
+        bottom: 439px;
+        left: -195px;
         width:190px;
      }
      .more-curated-button {
         position: relative;
         right: 198px;
         width:190px;
+        top: -49px;
      }
-    
+    li.nav-headline {
+        padding-top: 13px;
+        margin-left: 184px;
+        border: 1px solid white;
+    }
     }
 
     ul {
         overflow: hidden;
         max-height: 0;
         transition: max-height .2s ease-out;
+        background: #020659;
+        margin-top:-1px;
     }
+    ul li {
+        list-style: none;
+        font-size:18px;
+        float:left;
+    }
+
     label {
         cursor: pointer;
         display: inline-block;
